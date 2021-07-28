@@ -38,7 +38,6 @@ public class Stock {
         try {
             lock.lock();
             System.out.println("Приход Авто в австосалон");
-            Thread.sleep(TIME_OF_SELLING);
             cars.add(car);
             System.out.printf("на складе %s авто\n", cars.size());
             condition.signal();

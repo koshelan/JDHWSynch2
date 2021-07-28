@@ -4,13 +4,12 @@ public class Manufacture extends Thread implements Runnable {
     public static final int NUMBER_OF_CARS = 10;
 
     private Showroom showroom;
+    private int id = 0;
 
 
     public Manufacture(Showroom showroom) {
         this.showroom = showroom;
     }
-
-    int id = 0;
 
     @Override
     public void run() {
@@ -29,4 +28,5 @@ public class Manufacture extends Thread implements Runnable {
         }
         return new Car("VV".concat(String.valueOf(id++)), "Corola");
     }
+
 }
